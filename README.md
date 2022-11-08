@@ -1,3 +1,5 @@
+![go](learning-go.jpg)
+
 # Basic Go Card Game
 
 This served as an introduction to Go for me. 
