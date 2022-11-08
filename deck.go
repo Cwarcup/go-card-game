@@ -59,3 +59,19 @@ func (d deck) saveToFile(filename string) error {
 	return os.WriteFile(filename, []byte(d.toString()), 0666)
 
 }
+
+// read a deck from a file
+func newDeckFromFile(filename string) deck {
+	// read the file
+	bs, err := os.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Error:", err)
+		os.Exit(1)
+	}
+
+	// convert the byte slice to a string
+	s := strings.Split(string(bs), ",")
+
+	// convert the string to a deck
+	return deck(s)
+}
