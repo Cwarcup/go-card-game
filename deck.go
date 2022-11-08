@@ -81,6 +81,7 @@ func newDeckFromFile(filename string) deck {
 // shuffle the deck
 // need to accept a deck, shuffle around the cards, and return the deck
 func (d deck) shuffle() deck {
+
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
 	// for each card in the deck
