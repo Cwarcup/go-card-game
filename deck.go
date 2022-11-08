@@ -35,3 +35,11 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+// pass in a deck and the number of cards you want to deal
+// returns two decks, the first is the hand and the second is the remaining deck
+func deal(d deck, handSize int) (deck, deck) {
+	// return everything from the start of the deck to the handSize
+	// and everything from the handSize to the end of the deck
+	return d[:handSize], d[handSize:]
+}
